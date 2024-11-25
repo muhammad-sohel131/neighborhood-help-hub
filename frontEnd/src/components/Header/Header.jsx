@@ -35,8 +35,13 @@ const Header = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/profile" className="nav-item" onClick={() => setMenuOpen(false)}>
-                            Profile
+                        <Link to="/profiles" className="nav-item" onClick={() => setMenuOpen(false)}>
+                            Profiles
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/login" className="nav-item" onClick={() => setMenuOpen(false)}>
+                            Login
                         </Link>
                     </li>
                 </ul>

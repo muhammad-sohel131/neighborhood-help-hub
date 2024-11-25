@@ -3,14 +3,10 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-        <footer className="footer">
-            <div className="footer-content">
-                <p>&copy; {new Date().getFullYear()} Neighborhood Help Hub. All rights reserved.</p>
-                <p>
-                    <a href="/terms">Terms of Service</a> | <a href="/privacy">Privacy Policy</a>
-                </p>
-            </div>
-        </footer>
+        <footer className="footer-section">
+                <p>&copy; 2024 Neighborhood Help Hub. All rights reserved.</p>
+                <p>Terms of Service | Privacy Policy</p>
+            </footer>
     );
 };
 

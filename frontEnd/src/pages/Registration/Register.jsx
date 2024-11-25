@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Register.css';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
     const [formData, setFormData] = useState({
@@ -80,11 +81,14 @@ const Register = () => {
                             name="services"
                             value={formData.services}
                             onChange={handleChange}
-                            required
+                          
                         />
                     </div>
                     <button type="submit" className="register-button">Register</button>
                 </form>
+                <p className="signup-link">
+                    Already have an account? <Link to="/login">Login here</Link>
+                </p>
             </div>
         </div>
     );

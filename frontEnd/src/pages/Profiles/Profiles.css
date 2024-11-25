@@ -1,0 +1,62 @@
+.profiles-page {
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9; /* Light background */
+    color: #333; /* Dark text */
+}
+
+.profiles-header {
+    text-align: center;
+    color: #283593; /* Primary color */
+    margin-bottom: 20px;
+}
+
+.profiles-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.profile-card {
+    background-color: #ffffff; /* White card */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 10px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
+}
+
+.profile-card h2 {
+    color: #283593; /* Primary color for titles */
+    font-size: 18px;
+}
+
+.profile-card p {
+    margin: 5px 0;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.details-button {
+    background-color: #283593; /* Primary color button */
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.details-button:hover {
+    background-color: #1a237e; /* Darker primary color on hover */
+}
+
+@media (max-width: 768px) {
+    .profile-card {
+        width: 100%;
+    }
+}
