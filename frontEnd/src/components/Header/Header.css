@@ -1,0 +1,92 @@
+/* General Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #283593; /* Deep blue for a professional look */
+    color: #fff;
+    position: relative;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin: 0;
+    font-weight: 600;
+    color: #f8f9fa; /* Light color for readability */
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #e3f2fd; /* Light blue for contrast */
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.nav-item:hover {
+    background-color: #5c6bc0; /* Hover effect with a slightly lighter blue */
+    color: #fff; /* Ensure contrast on hover */
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.hamburger-icon,
+.close-icon {
+    font-size: 28px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #283593;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        display: none;
+        padding: 10px 20px;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}

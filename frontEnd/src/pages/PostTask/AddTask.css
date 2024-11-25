@@ -1,0 +1,73 @@
+.add-task-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #ffffff; /* White background for contrast */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-task-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #283593; /* Blue for better contrast */
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333; /* Darker color for readability */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #F9F9F9; /* Light gray for subtle contrast */
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #283593; /* Consistent blue focus color */
+    outline: none;
+    box-shadow: 0 0 5px rgba(30, 136, 229, 0.5);
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: #ffffff; /* White text */
+    background-color: #283593; /* Blue button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #1565C0; /* Darker blue on hover */
+}
+
+@media (max-width: 768px) {
+    .add-task-container {
+        padding: 15px;
+    }
+
+    .submit-button {
+        font-size: 14px;
+    }
+}
