@@ -1,22 +1,43 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './Login.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import AuthContext from '../../context/AuthContext';
 
 const Login = () => {
     const [phone, setPhone] = useState('');
     const [password, setPassword] = useState('');
+    const { handleLogin } = useContext(AuthContext)
+    const navigate = useNavigate();
 
-    const handleLogin = (e) => {
+    const submitLogin = (e) => {
         e.preventDefault();
-        // Logic for login handling
         console.log('Login details:', { phone, password });
+
+        fetch("http://localhost:5000/login",{
+            method: "POST",
+            headers: {
+                'Content-Type':'Application/json'
+            },
+            body: JSON.stringify({phone,password})
+        })
+        .then((res) => res.json())
+        .then(user => {
+            if(user.length === 0){
+                console.log("not correct")
+            }else {
+                console.log("correct")
+                handleLogin();
+                navigate("/")
+            }
+        })
+        .catch(e => console.log(e))
     };
 
     return (
         <div className="login-container">
             <div className="login-form">
                 <h2>Login</h2>
-                <form onSubmit={handleLogin}>
+                <form onSubmit={submitLogin}>
                     <div className="form-group">
                         <label htmlFor="phone">Phone</label>
                         <input
