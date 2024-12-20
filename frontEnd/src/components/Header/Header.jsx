@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
+import AuthContext from '../../context/AuthContext.jsx';
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const { isLogin, handleLogin } = useContext(AuthContext)
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -20,29 +22,34 @@ const Header = () => {
             <nav className={`navbar ${menuOpen ? 'active' : ''}`}>
                 <ul className="nav-links">
                     <li>
-                        <Link to="/" className="nav-item" onClick={() => setMenuOpen(false)}>
+                        <NavLink to="/" className="nav-item" onClick={() => setMenuOpen(false)}>
                             Home
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link to="/tasks" className="nav-item" onClick={() => setMenuOpen(false)}>
+                        <NavLink to="/tasks" className="nav-item" onClick={() => setMenuOpen(false)}>
                             Tasks
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link to="/post-task" className="nav-item" onClick={() => setMenuOpen(false)}>
+                        <NavLink to="/post-task" className="nav-item" onClick={() => setMenuOpen(false)}>
                             Post a Task
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link to="/profiles" className="nav-item" onClick={() => setMenuOpen(false)}>
+                        <NavLink to="/profiles" className="nav-item" onClick={() => setMenuOpen(false)}>
                             Profiles
-                        </Link>
+                        </NavLink>
                     </li>
                     <li>
-                        <Link to="/login" className="nav-item" onClick={() => setMenuOpen(false)}>
-                            Login
-                        </Link>
+                        {
+                            !isLogin ?
+                            <NavLink to="/login" className="nav-item" onClick={() => setMenuOpen(false)}>
+                                Login
+                            </NavLink>
+                            :
+                            <button onClick={() => handleLogin()} className='logBtn'>Logout</button>
+                        }
                     </li>
                 </ul>
             </nav>

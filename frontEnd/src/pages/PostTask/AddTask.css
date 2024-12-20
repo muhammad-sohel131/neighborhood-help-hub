@@ -1,4 +1,5 @@
 .add-task-container {
+    width: 90vw;
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
