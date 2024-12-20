@@ -1,13 +1,13 @@
 .profiles-page {
     padding: 20px;
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9; /* Light background */
-    color: #333; /* Dark text */
+    background-color: #f4f4f9; 
+    color: #333; 
 }
 
 .profiles-header {
     text-align: center;
-    color: #283593; /* Primary color */
+    color: #283593; 
     margin-bottom: 20px;
 }
 
@@ -19,17 +19,17 @@
 }
 
 .profile-card {
-    background-color: #ffffff; /* White card */
-    border: 1px solid #ddd; /* Light border */
+    background-color: #ffffff; 
+    border: 1px solid #ddd; 
     border-radius: 10px;
     padding: 15px;
     width: 300px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
     text-align: center;
 }
 
 .profile-card h2 {
-    color: #283593; /* Primary color for titles */
+    color: #283593; 
     font-size: 18px;
 }
 
@@ -40,7 +40,7 @@
 }
 
 .details-button {
-    background-color: #283593; /* Primary color button */
+    background-color: #283593; 
     color: #ffffff;
     border: none;
     padding: 10px;
@@ -52,9 +52,16 @@
 }
 
 .details-button:hover {
-    background-color: #1a237e; /* Darker primary color on hover */
+    background-color: #1a237e; 
 }
 
+.description {
+    display: flex;
+    justify-content: space-between;
+}
+.description > div {
+    text-align: left;
+}
 @media (max-width: 768px) {
     .profile-card {
         width: 100%;
